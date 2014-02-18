@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Main</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="Scripts/Blogs.js"></script>
+</head>
+<body ng-app="WebApiAndAngularJSSample">
+    <div ng-controller="BlogsCtrl">
+        <button ng-click="getAllBlogs()">Get All Blogs</button>
+        <br/>
+        <ul>
+            <li ng-repeat="blog in blogs">
+                {{blog.Title}}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
