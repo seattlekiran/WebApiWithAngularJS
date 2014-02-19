@@ -85,6 +85,7 @@
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Scripts\Blogs.js" />
+    <Content Include="Templates\BlogBriefInfo.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
