@@ -11,7 +11,8 @@ app.config(['$routeProvider',
         }).
         when('/showPosts', {
             templateUrl: 'templates/showPosts.html',
-            controller: 'BlogsCtrl'
+            controller: 'BlogsCtrl',
+            
         }).
         when('/showPost/:postId', {
             templateUrl: 'templates/showPost.html',
@@ -22,15 +23,15 @@ app.config(['$routeProvider',
         });
   }]);
 
-app.controller("BlogsCtrl", function ($scope, $http) {
+app.controller("BlogsCtrl", function ($scope, $http, $routeParams) {
 
-    //$scope.getBlog = function () {
-    //    $http.get("api/blogs/" + $routeParams.postId).success(function (data) {
-    //        $scope.blog = data;
-    //    }).error(function () {
-    //        alert("an error has occurred");
-    //    })
-    //}
+    $scope.getBlog = function () {
+        $http.get("api/blogs/" + $routeParams.postId).success(function (data) {
+            $scope.blog = data;
+        }).error(function () {
+            alert("an error has occurred");
+        })
+    }
 
     $scope.getAllBlogs = function(){
         $http.get("api/blogs").success(function(data){
