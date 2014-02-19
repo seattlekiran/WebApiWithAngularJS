@@ -1,6 +1,4 @@
-﻿<div>
-    <button ng-click="getAllBlogs()">Get All Blogs</button>
-    <br />
+﻿<div ng-init="getAllBlogs()">
     <ul>
         <li ng-repeat="blog in blogs" ng-include="'templates/blogbriefinfo.html'">
         </li>
